@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+    background-image: url(./assets//images/HeroImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: fixed;
+
+}
