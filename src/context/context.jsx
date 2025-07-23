@@ -1,6 +1,6 @@
-
 import React, { createContext, useState, useContext } from "react";
 import initialStudents from "../Students/StudentsList";
+import toast, { Toaster } from 'react-hot-toast';
 
 const StudentContext = createContext();
 
@@ -15,13 +15,16 @@ export const StudentProvider = ({ children }) => {
   };
 
   const saveStudent = (student) => {
+    toast.success("Student successfully added");
     if (!savedStudents.find((s) => s.id === student.id)) {
       setSavedStudents([...savedStudents, student]);
     }
   };
 
   const filtered = (showSaved ? savedStudents : students).filter((student) =>
-    `${student.name} ${student.surname}`.toLowerCase().includes(search.toLowerCase())
+    `${student.name} ${student.surname}`
+      .toLowerCase()
+      .includes(search.toLowerCase())
   );
 
   return (

@@ -38,6 +38,7 @@ function HeroPage() {
 
               {/* Save */}
               <button
+               
                 onClick={() => saveStudent(student)}
                 className="flex items-center bg-[#212121] text-white fill-[#9b9999] px-4 py-2 pl-[0.9em] rounded-[15px] font-extrabold text-[14px] cursor-pointer transition-all duration-300 active:scale-95 hover:bg-black group"
               >
